@@ -1,2 +1,2 @@
 # atividadesPython
-pequenas atividades de oógica em python 
+pequenas atividades de lógica em python 
