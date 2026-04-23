@@ -9,18 +9,19 @@ def inicio():
 
         opcao = int(input("Escolha uma opção: "))
 
-        if opcao == 1:
-            print("Você escolheu Inserir!")
-        elif opcao == 2:
-            print("Você escolheu Editar!")
-        elif opcao == 3:
-            print("Você escolheu Excluir!")
-        elif opcao == 4:
-            print("Você escolheu Listar!")
-        elif opcao == 5:
-            print("Saindo...")
-            break
-        else:
-            print("Opção inválida!")
+        match opcao:
+            case 1:
+                print("Você escolheu Inserir!")
+            case 2:
+                print("Você escolheu Editar!")
+            case 3:
+                print("Você escolheu Excluir!")
+            case 4:
+                print("Você escolheu Listar!")
+            case 5:
+                print("Saindo...")
+                break
+            case _:
+                print("Opção inválida!")
 
 inicio()

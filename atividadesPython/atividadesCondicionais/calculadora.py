@@ -3,18 +3,19 @@ def inicio():
     b = int(input("Segundo número: "))
     op = input("Digite a operação (+, -, *, /): ")
 
-    if op == '+':
-        print("Resultado:", a + b)
-    elif op == '-':
-        print("Resultado:", a - b)
-    elif op == '*':
-        print("Resultado:", a * b)
-    elif op == '/':
-        if b != 0:
-            print("Resultado:", a / b)
-        else:
-            print("Erro: divisão por zero")
-    else:
-        print("Operação inválida")
+    match op:
+        case '+':
+            print("Resultado:", a + b)
+        case '-':
+            print("Resultado:", a - b)
+        case '*':
+            print("Resultado:", a * b)
+        case '/':
+            if b != 0:
+                print("Resultado:", a / b)
+            else:
+                print("Erro: divisão por zero")
+        case _:
+            print("Operação inválida")
 
 inicio()
