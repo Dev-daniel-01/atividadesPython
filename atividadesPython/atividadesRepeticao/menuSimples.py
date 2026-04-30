@@ -22,6 +22,6 @@ def inicio():
                 print("Saindo...")
                 break
             case _:
-                print("Opção inválida!")
+                print("Opção inválida!") 
 
 inicio()
