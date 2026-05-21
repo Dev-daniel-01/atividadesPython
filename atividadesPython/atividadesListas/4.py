@@ -8,6 +8,9 @@ def inicio():
         numeros.append(numero)
 
     print("Lista original:", numeros)
-    print("Lista ao contrário:", numeros[::-1])
+
+    numeros.reverse()
+
+    print("Lista ao contrário:", numeros)
 
 inicio()

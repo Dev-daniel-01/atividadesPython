@@ -1,4 +1,4 @@
-# 8. Lista de compras
+# 8. Lista de compras usando match case
 
 def inicio():
     compras = []
@@ -12,29 +12,36 @@ def inicio():
 
         opcao = int(input("Escolha uma opção: "))
 
-        if opcao == 1:
-            item = input("Digite o item: ")
-            compras.append(item)
+        match opcao:
 
-        elif opcao == 2:
-            item = input("Digite o item para remover: ")
+            case 1:
+                item = input("Digite o item: ")
+                compras.append(item)
+                print("Item adicionado!")
 
-            if item in compras:
-                compras.remove(item)
-                print("Item removido!")
-            else:
-                print("Item não encontrado!")
+            case 2:
+                item = input("Digite o item para remover: ")
 
-        elif opcao == 3:
-            print("Lista de compras:")
-            for item in compras:
-                print(item)
+                if item in compras:
+                    compras.remove(item)
+                    print("Item removido!")
+                else:
+                    print("Item não encontrado!")
 
-        elif opcao == 4:
-            print("Programa encerrado!")
-            break
+            case 3:
+                print("Lista de compras:")
 
-        else:
-            print("Opção inválida!")
+                if len(compras) == 0:
+                    print("Lista vazia!")
+                else:
+                    for item in compras:
+                        print(f"\n{item}")
+
+            case 4:
+                print("Programa encerrado!")
+                break
+
+            case _:
+                print("Opção inválida!")
 
 inicio()

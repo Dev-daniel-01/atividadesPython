@@ -1,14 +1,8 @@
 # 10. Mega-Sena
 
 def inicio():
-    gabarito = []
+    gabarito = [5, 12, 23, 34, 45, 60]
     aposta = []
-
-    print("Digite os 6 números do gabarito:")
-
-    for i in range(6):
-        numero = int(input("Número: "))
-        gabarito.append(numero)
 
     print("Digite os 10 números da aposta:")
 
@@ -22,6 +16,8 @@ def inicio():
         if numero in gabarito:
             pontos += 1
 
+    print("Gabarito:", gabarito)
+    print("Aposta:", aposta)
     print(f"O apostador fez {pontos} pontos.")
 
 inicio()
